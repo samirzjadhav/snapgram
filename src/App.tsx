@@ -1,13 +1,18 @@
 import React from "react";
-import './index.css'
+import { Routes, Router, Route } from "react-router-dom";
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </header>
-    </div>
+    <main className="flex h-screen">
+      <Routes>
+        {/* Public routes */}
+        <Route path="/sign-in" element={<SigninForm />} />
+
+        {/* Private routes */}
+        <Route index element={<Home />} />
+      </Routes>
+    </main>
   );
 }
 
