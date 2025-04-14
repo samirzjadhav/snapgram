@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Router, Route } from "react-router-dom";
 import "./index.css";
-import SigninForm from "./_auth/forms/SigninForm";
-import { Home } from "./_root/pages";
-import SignupForm from "./_auth/forms/SignupForm";
-import AuthLayout from "./_auth/AuthLayout";
+import SigninForm from "./_auth/forms/SigninForm.tsx";
+import Home from "./_root/pages/Home.tsx";
+import SignupForm from "./_auth/forms/SignupForm.tsx";
+import AuthLayout from "./_auth/AuthLayout.tsx";
 
 function App() {
   return (
