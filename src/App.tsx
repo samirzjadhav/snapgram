@@ -5,6 +5,7 @@ import SigninForm from "./_auth/forms/SigninForm.tsx";
 import Home from "./_root/pages/Home.tsx";
 import SignupForm from "./_auth/forms/SignupForm.tsx";
 import AuthLayout from "./_auth/AuthLayout.tsx";
+import RootLayout from "./_root/RootLayout.tsx";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         </Route>
 
         {/* Private routes */}
-        <Route index element={<Home />} />
+        <Route element={<RootLayout />}>
+          <Route index element={<Home />} />
+        </Route>
       </Routes>
     </main>
   );
